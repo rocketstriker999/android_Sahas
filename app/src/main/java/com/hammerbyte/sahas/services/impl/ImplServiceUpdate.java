@@ -120,26 +120,7 @@ public class ImplServiceUpdate implements ServiceUpdate {
 
     }
 
-    @Override
-    public void startUpdateDownload(String updateUrl) {
-        final ExecutorService executorService = Executors.newSingleThreadExecutor();
-        executorService.submit(() -> {
-            onUpdateDownloadStart();
-            try {
-                onu
-                onAPIResponseReceived(appInstance.get().requestAPI(endPoint, postBody));
-            } catch (IOException e) {
-                e.printStackTrace();
-                onAPIResponseNotReceived(endPoint);
-            } catch (NoNetWorkException e) {
-                onNoNetworkAvailable();
-            } finally {
-                executorService.shutdown();
-                onAPIRequestEnd();
-            }
-        });
 
-    }
 
     @Override
     public void onUpdateDownloadStart() {

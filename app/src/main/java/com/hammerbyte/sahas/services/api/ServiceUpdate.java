@@ -32,16 +32,9 @@ public interface ServiceUpdate extends ServiceAPI{
         executorService.submit(() -> {
             onUpdateDownloadStart();
             try {
-                onUpdateDownloadCompleted(appInstance.get().requestUpdateBinary(endPoint));
-            } catch (JSONException e) {
-                e.printStackTrace();
-                onAPIResponseParseError();
-            } catch (IOException e) {
-                e.printStackTrace();
-                onAPIResponseNotReceived(endPoint);
-            }catch (NoNetWorkException e) {
-                onNoNetworkAvailable();
-            }finally {
+                //onUpdateDownloadCompleted(appInstance.get().requestUpdateBinary(endPoint));
+                onUpdateDownloadCompleted(1,new File(""));
+            }  finally {
                 executorService.shutdown();
                 onAPIRequestEnd();
             }
