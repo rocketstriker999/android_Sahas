@@ -1,11 +1,13 @@
 package com.hammerbyte.sahas.activities;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.hammerbyte.sahas.BuildConfig;
 import com.hammerbyte.sahas.R;
 import com.hammerbyte.sahas.activities.common.ActivitySuper;
+import com.hammerbyte.sahas.databinding.ActivitySplashBinding;
 import com.hammerbyte.sahas.services.api.ServiceMaintenance;
 import com.hammerbyte.sahas.services.api.ServiceUsageData;
 import com.hammerbyte.sahas.services.impl.ImplServiceMaintenance;
@@ -14,7 +16,6 @@ import com.hammerbyte.sahas.services.impl.ImplServiceUsageData;
 import java.lang.ref.WeakReference;
 
 public class ActivitySplash extends ActivitySuper {
-
     private final ServiceMaintenance serviceMaintenance;
     private final ServiceUsageData serviceUsageData;
 
@@ -27,10 +28,13 @@ public class ActivitySplash extends ActivitySuper {
     }
 
     public TextView getTvStatus() {
+        Log.d("getTvStatus", tvStatus.toString());
         return tvStatus;
     }
 
     public void setTvStatus(TextView tvStatus) {
+        Log.d("getTvStatus1", tvStatus.toString());
+
         this.tvStatus = tvStatus;
     }
 

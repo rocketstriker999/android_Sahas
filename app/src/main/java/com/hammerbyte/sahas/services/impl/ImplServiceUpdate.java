@@ -120,8 +120,6 @@ public class ImplServiceUpdate implements ServiceUpdate {
 
     }
 
-
-
     @Override
     public void onUpdateDownloadStart() {
         //once downloaded open installation fragment

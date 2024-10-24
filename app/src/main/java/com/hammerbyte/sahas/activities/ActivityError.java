@@ -8,9 +8,10 @@ import android.widget.TextView;
 
 import com.hammerbyte.sahas.R;
 import com.hammerbyte.sahas.activities.common.ActivitySuper;
+import com.hammerbyte.sahas.databinding.ActivityErrorBinding;
 
 public class ActivityError extends ActivitySuper  {
-
+    private ActivityErrorBinding binding;
     private TextView tvErrorHeader;
     private ImageView imageError;
     private TextView tvErrorMessage;
@@ -19,23 +20,24 @@ public class ActivityError extends ActivitySuper  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_error);
+        binding = ActivityErrorBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
     }
 
     @Override
     public void mapUI() {
-        tvErrorHeader = findViewById(R.id.TV_ERROR_HEADER);
-        tvErrorMessage = findViewById(R.id.TV_ERROR_MESSAGE);
-        imageError = findViewById(R.id.IMG_ERROR);
-        btnTryAgain = findViewById(R.id.BTN_RETRY);
-        btnExit = findViewById(R.id.BTN_EXIT);
+//        tvErrorHeader = findViewById(R.id.TV_ERROR_HEADER);
+//        tvErrorMessage = findViewById(R.id.TV_ERROR_MESSAGE);
+//        imageError = findViewById(R.id.IMG_ERROR);
+//        btnTryAgain = findViewById(R.id.BTN_RETRY);
+//        btnExit = findViewById(R.id.BTN_EXIT);
     }
 
     @Override
     public void mapUIValues() {
-        tvErrorHeader.setText(getIntent().getStringExtra(getString(R.string.ERROR_HEADER)));
-        tvErrorMessage.setText(getIntent().getStringExtra(getString(R.string.ERROR_MESSAGE)));
-        imageError.setImageResource(getIntent().getIntExtra(getString(R.string.ERROR_IMAGE), R.drawable.vector_problem));
+        binding.TVERRORHEADER.setText(getIntent().getStringExtra(getString(R.string.ERROR_HEADER)));
+        binding.TVERRORMESSAGE.setText(getIntent().getStringExtra(getString(R.string.ERROR_MESSAGE)));
+        binding.IMGERROR.setImageResource(getIntent().getIntExtra(getString(R.string.ERROR_IMAGE), R.drawable.vector_problem));
     }
 
     @Override

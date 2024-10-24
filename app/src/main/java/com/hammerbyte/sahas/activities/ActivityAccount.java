@@ -2,24 +2,31 @@ package com.hammerbyte.sahas.activities;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ProgressBar;
 
-import com.hammerbyte.sahas.R;
+
+
 import com.hammerbyte.sahas.activities.common.ActivitySuper;
+import com.hammerbyte.sahas.databinding.ActivityAccountBinding;
+import com.hammerbyte.sahas.services.impl.ImplServiceAuthentication;
 
 public class ActivityAccount extends ActivitySuper {
-
-    private ProgressBar pbLoading;
+    private ActivityAccountBinding binding;
+    private ImplServiceAuthentication implServiceAuthentication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
+        binding=ActivityAccountBinding.inflate(getLayoutInflater());
+
+        setContentView(binding.getRoot());
+
+        implServiceAuthentication=new ImplServiceAuthentication();
     }
 
     @Override
     protected void mapUI() {
-        pbLoading = findViewById(R.id.PB_LOADING);
+
+   // implServiceAuthentication.StartAuthentication(binding.EMAILEDITTEXT.getText().toString());
     }
 
     @Override
@@ -29,7 +36,8 @@ public class ActivityAccount extends ActivitySuper {
 
     @Override
     protected void mapVisibility() {
-        pbLoading.setVisibility(View.INVISIBLE);
+        binding.PBLOADING.setVisibility(View.INVISIBLE);
+
     }
 
     @Override
@@ -47,4 +55,6 @@ public class ActivityAccount extends ActivitySuper {
     protected void onResume() {
         super.onResume();
     }
+
+
 }

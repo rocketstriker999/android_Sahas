@@ -6,7 +6,10 @@ android {
 
     buildFeatures {
         buildConfig = true
+        viewBinding = true
+
     }
+
     namespace = "com.hammerbyte.sahas"
     compileSdk = 34
 
@@ -18,6 +21,7 @@ android {
             storeFile = file("./Sahas.jks")
         }
     }
+
 
     defaultConfig {
         applicationId = "com.hammerbyte.sahas"

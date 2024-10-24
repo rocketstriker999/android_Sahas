@@ -11,16 +11,18 @@ import androidx.annotation.Nullable;
 
 import com.hammerbyte.sahas.R;
 import com.hammerbyte.sahas.activities.ActivityUpdate;
+import com.hammerbyte.sahas.databinding.FragmentUpdateCheckBinding;
 import com.hammerbyte.sahas.fragments.common.FragmentSuper;
 
 public class FragmentUpdateCheck extends FragmentSuper {
-
+    private FragmentUpdateCheckBinding binding;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_update_check, container, false);
+        binding = FragmentUpdateCheckBinding.inflate(inflater, container, false); // Inflate the layout with binding
+        return binding.getRoot();
     }
 
 
