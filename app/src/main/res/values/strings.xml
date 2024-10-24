@@ -1,0 +1,45 @@
+<resources>
+    <string name="APP_NAME">Sahas</string>
+    <string name="APP_TAG_LINE">Transforming to Digital Education</string>
+    <string name="APP_SPLASH_TAGLINE">Select Smart. Select Sahas.</string>
+    <string name="APP_LOGIN_TAGLINE">Let\'s Continue With Your Account</string>
+
+    <string name="CHECK_UPDATE">Checking For Update...</string>
+    <string name="AVAILABLE_UPDATE_NON_CRITICAL">Update Available !</string>
+    <string name="AVAILABLE_UPDATE_CRITICAL">Critical Update Available !</string>
+    <string name="CRITICAL_UPDATE">New Application Update Is Ready To Download. By Installing This Update , App Will Get Most Latest Features Available</string>
+    <string name="NON_CRITICAL_UPDATE">New Mandatory Application Update Is Ready To Download, This Will Help You To Get Better User Experience By Getting Most Latest Features &amp; Security </string>
+
+
+    <string name="SPN_PLAY_BACK_SPINNER">Playback Speed</string>
+    <string name="NOTICE_COPY_RIGHT">Copyright © 2019–24 by Sahas Institute</string>
+    <string name="purchaseForm">Sahas Collects some of the information from the users who want to purchase the course , these information are collected in order to server other users better in future</string>
+    <string name="changeDeviceInstruction">Are You facing challenge to login into your account due to invalid device error ? If you had lastly used any other device then in order to open your account here , kindly raise Change Device Request by Providing your email below. \n\nHere are the steps to raise Device Reset Request\n1) Enter Email Address\n2) Press Raise Request Button\n3) OTP Verification\n4) Device Reset Request Will be raised</string>
+    <string name="requestPermission">In order to server you better , Sahas Mobile Application requires few permissions.Users must need to grant those all permissions for executing and processing application further. Sahas Mobile application does not steal or misuse any of the user data , the usage of permission and data are mentioned in the privacy policy of sahas education official website : http://sahasinstitute.com </string>
+    <string name="dummyTextLong">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.</string>
+    <string name="dummyTextShort">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</string>
+
+    <string name="OPTION_TRY_AGAIN">OPTION_TRY_AGAIN</string>
+    <string name="OPTION_EXIT">OPTION_EXIT</string>
+
+    <string name="ERROR_HEADER">ERROR_HEADER</string>
+    <string name="ERROR_MESSAGE">ERROR_MESSAGE</string>
+    <string name="ERROR_IMAGE">ERROR_IMAGE</string>
+
+    <string name="ERROR_NO_NETWORK">No Internet Connection</string>
+    <string name="ERROR_NO_NETWORK_MESSAGE">It looks like you\'re not connected to the internet. Please check your Wi-Fi or mobile data settings and try again.</string>
+
+    <string name="ERROR_API_UNAVAILABLE">Service Unavailable</string>
+    <string name="ERROR_API_UNAVAILABLE_MESSAGE">We\'re experiencing technical difficulties. Our services are temporarily unavailable. Please try again later.</string>
+
+    <string name="MAINTENANCE_ENABLED">Maintenance Mode</string>
+    <string name="MAINTENANCE_ENABLED_MESSAGE">The system is currently undergoing maintenance. Please try again later.</string>
+
+    <string name="ERROR_API_PARSE">Data Error</string>
+    <string name="ERROR_API_PARSE_MESSAGE">Oops! We encountered an issue while processing the data. Please try again later.</string>
+
+
+    <string name="RESPONSE_BODY">RESPONSE_BODY</string>
+    <string name="RESPONSE_CODE">RESPONSE_CODE</string>
+
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "999180353752",
+    "project_id": "sahas-smart-studies-1b45d",
+    "storage_bucket": "sahas-smart-studies-1b45d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999180353752:android:e51c90a0a5b198ae6517ad",
+        "android_client_info": {
+          "package_name": "com.hammerbyte.sahaseducation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999180353752-1jvonlmvfc2nkppma5322sfec33ntbnp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hammerbyte.sahaseducation",
+            "certificate_hash": "aeb6292ac218bcb09079b50b5ae0469bb9c29105"
+          }
+        },
+        {
+          "client_id": "999180353752-mi21htgnbtol7m42e09bsuvtm80419v9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjUxIpoqiLMVJ6nPv5nVaLkVP5_0zF4oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999180353752-mi21htgnbtol7m42e09bsuvtm80419v9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
