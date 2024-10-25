@@ -7,11 +7,22 @@ import android.view.View;
 
 import com.hammerbyte.sahas.activities.common.ActivitySuper;
 import com.hammerbyte.sahas.databinding.ActivityAccountBinding;
+import com.hammerbyte.sahas.services.api.ServiecAuthentication;
 import com.hammerbyte.sahas.services.impl.ImplServiceAuthentication;
+import com.hammerbyte.sahas.services.impl.ImplServiceMaintenance;
+import com.hammerbyte.sahas.services.impl.ImplServiceUsageData;
+
+import java.lang.ref.WeakReference;
 
 public class ActivityAccount extends ActivitySuper {
     private ActivityAccountBinding binding;
-    private ImplServiceAuthentication implServiceAuthentication;
+    private ServiecAuthentication implServiceAuthentication;
+
+
+    public ActivityAccount() {
+        this.implServiceAuthentication = new ImplServiceAuthentication(new WeakReference<>(this));
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +30,8 @@ public class ActivityAccount extends ActivitySuper {
         binding=ActivityAccountBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
+        implServiceAuthentication.StartAuthentication("");
 
-        implServiceAuthentication=new ImplServiceAuthentication();
     }
 
     @Override
@@ -42,6 +53,9 @@ public class ActivityAccount extends ActivitySuper {
 
     @Override
     protected void mapListeners() {
+        binding.LOGINBTN.setOnClickListener(v -> {
+            implServiceAuthentication.StartAuthentication(binding.EMAILEDITTEXT.getText().toString());
+        });
 
     }
 

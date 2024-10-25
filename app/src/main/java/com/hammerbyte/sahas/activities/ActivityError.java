@@ -12,10 +12,10 @@ import com.hammerbyte.sahas.databinding.ActivityErrorBinding;
 
 public class ActivityError extends ActivitySuper  {
     private ActivityErrorBinding binding;
-    private TextView tvErrorHeader;
-    private ImageView imageError;
-    private TextView tvErrorMessage;
-    private Button btnTryAgain, btnExit;
+//    private TextView tvErrorHeader;
+//    private ImageView imageError;
+//    private TextView tvErrorMessage;
+//    private Button btnTryAgain, btnExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +42,16 @@ public class ActivityError extends ActivitySuper  {
 
     @Override
     public void mapVisibility() {
-        btnTryAgain.setVisibility(getIntent().getBooleanExtra(getString(R.string.OPTION_TRY_AGAIN), false) ? View.VISIBLE : View.GONE);
-        btnExit.setVisibility(getIntent().getBooleanExtra(getString(R.string.OPTION_EXIT), false) ? View.VISIBLE : View.GONE);
+        binding.BTNRETRY.setVisibility(getIntent().getBooleanExtra(getString(R.string.OPTION_TRY_AGAIN), false) ? View.VISIBLE : View.GONE);
+        binding.BTNEXIT.setVisibility(getIntent().getBooleanExtra(getString(R.string.OPTION_EXIT), false) ? View.VISIBLE : View.GONE);
     }
 
     @Override
     public void mapListeners() {
-        btnExit.setOnClickListener(v -> {
+        binding.BTNEXIT.setOnClickListener(v -> {
             this.finishAffinity();
         });
-        btnTryAgain.setOnClickListener(v->{
+        binding.BTNRETRY.setOnClickListener(v->{
             this.finish();
         });
     }

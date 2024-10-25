@@ -41,5 +41,6 @@
 
     <string name="RESPONSE_BODY">RESPONSE_BODY</string>
     <string name="RESPONSE_CODE">RESPONSE_CODE</string>
+    <string name="VERIFY_OTP">Verification Code</string>
 
 </resources>
